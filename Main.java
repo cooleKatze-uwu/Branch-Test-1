@@ -4,13 +4,13 @@ public class Main {
     public static void main(String[] args) {
         // Short calculator application
         // +,-,*,/ as operators
-
+        // input() calls calculate()
+    
         while(true) {
             input();
         }
 
         
-
     }
 
     public static void input() {
@@ -27,9 +27,7 @@ public class Main {
                 input_operator != '*') {
                     System.out.println("Invalid operator. Please try again.");
                     return;
-
-        };
-
+              
         System.out.println("Enter the first number:");
         double input_double_a = scanner_double_a.nextDouble();
         System.out.println("Your first number is " + input_double_a);
@@ -42,7 +40,34 @@ public class Main {
 
     }
 
-        public static void calculate(double a, double b, char operator) {
+    };
 
+    public static void calculate(double a, double b, char operator) {
+        double result = 0;
+        switch (operator) {
+            case '+':
+                result = a + b;
+                break;
+
+            case '-':
+                result = a - b;
+                break;
+
+            case '*':
+                result = a * b;
+                break;
+
+            case '/':
+                result = a / b;
+                break;
+        
+            default:
+                System.out.println("Error. Please repeat your input.");
+                break;
         }
+
+        System.out.println("The result of " + a + " " + b + " = " + result);
+
+    }
+
 }
