@@ -27,6 +27,7 @@ public class Main {
                 input_operator != '*') {
                     System.out.println("Invalid operator. Please try again.");
                     return;
+                };
               
         System.out.println("Enter the first number:");
         double input_double_a = scanner_double_a.nextDouble();
@@ -37,8 +38,6 @@ public class Main {
         System.out.println("Your second number is " + input_double_b);
 
         calculate(input_double_a, input_double_b, input_operator);
-
-    }
 
     };
 
