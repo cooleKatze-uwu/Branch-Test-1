@@ -4,8 +4,6 @@ public class Main {
         // +,-,*,/ as operators
         // input() calls calculate()
     
-       
-
         while(true) {
             input();
         }
@@ -18,7 +16,7 @@ public class Main {
     };
 
     public static void calculate(double a, double b, char operator) {
-        double result;
+        double result = 0;
         switch (operator) {
             case '+':
                 result = a + b;
@@ -37,10 +35,12 @@ public class Main {
                 break;
         
             default:
+                System.out.println("Error. Please repeat your input.");
                 break;
         }
 
-        
+        System.out.println("The result of " + a + " " + b + " = " + result);
+
     }
 
 }
